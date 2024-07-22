@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity</title>
+    <link rel="stylesheet" href="css/todos.css">
+    <style>
+        /* CSS Inline para exemplo */
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1 style="color: rgb(3, 3, 3)">Clarity</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="filter-container">
+        <div class="filter-group">
+            <h3>Categoria</h3>
+            <label><input type="checkbox" name="category" value="inverno"> Coleção inverno</label>
+            <label><input type="checkbox" name="category" value="fitness"> Coleção Fitness</label>
+        </div>
+    </div>
+
+    <section id="destaques">
+        <div class="carrossel">
+            <div class="produto" data-category="fitness">
+                <a href="camisa.html"><img src="imagens/capreta.png" alt="Camisa"></a>
+                <div>Camisa</div>
+                <div style="font-weight: 100; font-family: Arial, sans-serif;">R$73,90</div>
+            </div>
+
+            <div class="produto" data-category="inverno">
+                <a href="blusa.html"><img src="imagens/blucinza.png" alt="Jaqueta Puffer"></a>
+                <div>Jaqueta Puffer</div>
+                <div style="font-weight: 100; font-family: Arial, sans-serif;">R$112,50</div>
+            </div>
+
+            <div class="produto" data-category="inverno">
+                <a href="sueter.html"><img src="imagens/sueter.png" alt="Sueter"></a>
+                <div>Sueter</div>
+                <div style="font-weight: 100; font-family: Arial, sans-serif;">R$98,25</div>
+            </div>
+            
+            <div class="produto" data-category="fitness">
+                <a href="shorts.html"><img src="imagens/shorts2.png" alt="Short"></a>
+                <div>Short</div>
+                <div style="font-weight: 100; font-family: Arial, sans-serif;">R$48,99</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.filter-group input[type="checkbox"]');
+            const produtos = document.querySelectorAll('.carrossel .produto');
+
+            function updateProducts() {
+                const selectedCategories = Array.from(checkboxes)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => checkbox.value);
+
+                produtos.forEach(produto => {
+                    const category = produto.getAttribute('data-category');
+                    if (selectedCategories.length === 0 || selectedCategories.includes(category)) {
+                        produto.classList.remove('hidden');
+                    } else {
+                        produto.classList.add('hidden');
+                    }
+                });
+            }
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateProducts);
+            });
+
+            // Initial call to show the products based on the default state of checkboxes
+            updateProducts();
+        });
+    </script>
+</body>
+</html>

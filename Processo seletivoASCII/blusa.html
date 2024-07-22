@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity</title>
+    <link rel="stylesheet" href="css/produto.css">
+    <script src="script.js" defer></script>
+</head>
+<body> 
+    <header id="header">
+        <h1>Clarity</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="product-display">
+            <div class="container-slider">
+                <button id="prev-button"><img src="imagens/arrow.png" alt="Prev"></button>
+                <div class="container-images">
+                    <img src="imagens/blupreta.png" alt="Blusa" class="slider on">
+                    <img src="imagens/blucinza.png" alt="Blusa" class="slider">
+                </div>
+                <button id="next-button"><img src="imagens/arrow.png" alt="Next"></button>
+            </div>
+            <div class="product-options">
+                <h2>Jaqueta Puffer</h2>
+                R$112,80
+
+                <div class="options">
+                    <div class="option">
+                        <label for="size">Tamanho:</label>
+                        <select id="size">
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                        </select>
+                    </div>
+                    <div class="option">
+                        <label for="color">Cor:</label>
+                        <select id="color">
+                            <option value="preto">Preta</option>
+                            <option value="branco">Cinza</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="buy-button">Comprar</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

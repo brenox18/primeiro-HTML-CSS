@@ -1,0 +1,87 @@
+/* Reset e configurações básicas */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+/* Estilo do header */
+header {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: -webkit-sticky; /* Para compatibilidade com Safari */
+    position: sticky;
+    text-align: center;
+    top: 0;
+    background: rgba(245, 242, 242, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #090909;
+    font-weight: bold;
+}
+
+main {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#destaques {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produto img {
+    width: 70%;
+}
+
+.carrossel {
+    display: flex;
+}
+
+section {
+    padding: 40px 0;
+}
+
+#sobre, #servicos, #contato {
+    background: #f9f9f9;
+    border-top: 1px solid #eaeaea;
+}
+
+.btn-ver-todos {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.btn-ver-todos:hover {
+    background-color: #444;
+}
+

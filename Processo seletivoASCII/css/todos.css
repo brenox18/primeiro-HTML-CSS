@@ -1,0 +1,97 @@
+/* css/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do header */
+header {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: -webkit-sticky; /* Para compatibilidade com Safari */
+    position: sticky;
+    text-align: center;
+    top: 0;
+    background: rgba(245, 242, 242, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#destaques {
+    padding: 20px;
+}
+
+.carrossel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.carrossel .produto {
+    box-sizing: border-box; 
+}
+
+.carrossel .produto img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.filter-container {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.filter-container h2 {
+    margin-top: 0;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 10px;
+}
